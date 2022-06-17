@@ -17,9 +17,43 @@
 body {
     font-family: var(--font-a);
     min-height: 100vh;
+    overflow-x: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.theme-buttons,
+.controls,
+.cards {
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.theme-buttons,
+.controls {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all .8s;
+}
+
+.theme-buttons:hover,
+button.controls:hover,
+.cards:hover {
+    transform: scale(1.3);
+}
+
+#choose-theme{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: fit-content;
+    padding: 6.4rem;
+}
+
+.hide {
+    display: none;
 }
 
 main {
@@ -51,24 +85,6 @@ main {
     justify-content: space-between;
 }
 
-.controls,
-.cards {
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-}
-
-.controls {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    transition: all .8s;
-}
-
-button.controls:hover,
-.cards:hover {
-    transform: scale(1.3);
-}
-
 #sounds {
     width: 30.8rem;
     height: 100%;
@@ -86,9 +102,37 @@ button.controls:hover,
     background-color: var(--color-b);
     border-radius: 2.4rem;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     transition: all .8s;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    background: var(--color-a);
+    width: 9rem;
+    height: .4rem;
+    border-radius: .5rem;   
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%; 
+    background: var(--color-a);
+    cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+    border: 0;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%; 
+    background: var(--color-a);
+    cursor: pointer;
 }
 
 .sound-on-div{
@@ -108,6 +152,19 @@ button.controls:hover,
 @media (max-width: 770px) {
     :root{
         font-size: clamp(2vw, 2vw + 10%, 3vw);
+    }
+
+    body {
+        flex-direction: column-reverse;
+    }
+
+    #choose-theme{
+       position: static; 
+    }
+    
+    #choose-theme > button > img {
+        width: 12vw;
+        height: 12vw;
     }
     
     main {

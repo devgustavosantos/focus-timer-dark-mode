@@ -6,10 +6,10 @@ const buttonDecrease = document.getElementById("decrease");
 const minutesDisplay = document.getElementById("minutes");
 const secondsDisplay = document.getElementById("seconds");
 
-const cardForest = document.getElementById("forest");
-const cardRain = document.getElementById("rain");
-const cardCoffeeShop = document.getElementById("coffee-shop");
-const cardFirePit = document.getElementById("fire-pit");
+const cardForest = document.getElementById("forest-card");
+const cardRain = document.getElementById("rain-card");
+const cardCoffeeShop = document.getElementById("coffee-shop-card");
+const cardFirePit = document.getElementById("fire-pit-card");
 
 export {
     buttonPlay,
