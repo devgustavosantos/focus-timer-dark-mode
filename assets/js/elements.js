@@ -11,6 +11,11 @@ const cardRain = document.getElementById("rain-card");
 const cardCoffeeShop = document.getElementById("coffee-shop-card");
 const cardFirePit = document.getElementById("fire-pit-card");
 
+const buttonLightMode = document.getElementById("light-mode");
+const buttonDarkMode = document.getElementById("dark-mode");
+
+
+
 export {
     buttonPlay,
     buttonStop,
@@ -21,5 +26,7 @@ export {
     cardForest,
     cardRain,
     cardCoffeeShop,
-    cardFirePit
+    cardFirePit,
+    buttonLightMode,
+    buttonDarkMode,
 }
