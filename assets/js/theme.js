@@ -44,8 +44,18 @@ export function Theme() {
     function changeColor(cssVariable, key) {
       page.style.setProperty(`${cssVariable}`, `${key}`);
     }
+
+    function chosenTheme(theme){
+      let whichThemeWillBeDisabled = theme == "light-mode"
+      if(whichThemeWillBeDisabled) {
+        return darkColors;
+      } else {
+        return lightColors;
+      }
+    }
     
     function changeTheme(themeColors) {
+      themeColors = chosenTheme(themeColors.id)
       for(let counter in themeColors) {
         let cssVariable = changeKeyText(counter);
         changeColor(cssVariable, themeColors[counter]);
@@ -54,12 +64,6 @@ export function Theme() {
     }
 
     return {
-        lightColors,
-        darkColors,
-        changeIcon,
-        changeKeyText,
-        changeColor,
         changeTheme
     }
-
 }

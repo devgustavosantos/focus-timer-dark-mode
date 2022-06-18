@@ -34,30 +34,30 @@ export function Events({
     });
      
     cardForest.addEventListener("click", function({currentTarget}) {
-        sound.turnOnAmbient(sound.forest);
+        sound.turnOnAmbient(currentTarget);
         display.activatedCard(currentTarget);
     });
      
     cardRain.addEventListener("click", function({currentTarget}) {
-        sound.turnOnAmbient(sound.rain);
+        sound.turnOnAmbient(currentTarget);
         display.activatedCard(currentTarget);
     });
      
     cardCoffeeShop.addEventListener("click", function({currentTarget}) {
-        sound.turnOnAmbient(sound.coffeeShop);
+        sound.turnOnAmbient(currentTarget);
         display.activatedCard(currentTarget);
     });
      
     cardFirePit.addEventListener("click", function({currentTarget}) {
-        sound.turnOnAmbient(sound.firePit);
+        sound.turnOnAmbient(currentTarget);
         display.activatedCard(currentTarget);
     });
 
-    buttonLightMode.addEventListener("click", function() {
-        theme.changeTheme(theme.darkColors);
+    buttonLightMode.addEventListener("click", function({currentTarget}) {
+        theme.changeTheme(currentTarget);
     });
 
-    buttonDarkMode.addEventListener("click", function() {
-        theme.changeTheme(theme.lightColors);
+    buttonDarkMode.addEventListener("click", function({currentTarget}) {
+        theme.changeTheme(currentTarget);
     });
 }
