@@ -70,6 +70,7 @@ button.controls:hover,
 
 .hide {
     display: none;
+    transition: all .8s;
 }
 
 main {
