@@ -30,23 +30,23 @@ export function Events({
          display.userDecreasedTime();
      });
      
-     cardForest.addEventListener("click", function() {
+     cardForest.addEventListener("click", function({currentTarget}) {
          sound.turnOnAmbient(sound.forest);
-         display.activatedCard(cardForest);
+         display.activatedCard(currentTarget);
      });
      
-     cardRain.addEventListener("click", function() {
+     cardRain.addEventListener("click", function({currentTarget}) {
          sound.turnOnAmbient(sound.rain);
-         display.activatedCard(cardRain);
+         display.activatedCard(currentTarget);
      });
      
-     cardCoffeeShop.addEventListener("click", function() {
+     cardCoffeeShop.addEventListener("click", function({currentTarget}) {
          sound.turnOnAmbient(sound.coffeeShop);
-         display.activatedCard(cardCoffeeShop);
+         display.activatedCard(currentTarget);
      });
      
-     cardFirePit.addEventListener("click", function() {
+     cardFirePit.addEventListener("click", function({currentTarget}) {
          sound.turnOnAmbient(sound.firePit);
-         display.activatedCard(cardFirePit);
+         display.activatedCard(currentTarget);
      });
 }

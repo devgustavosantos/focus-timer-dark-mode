@@ -35,8 +35,11 @@ export function Display ({
 
     function activatedCard(card){
         let icon = card.children[0].children[0];
-        icon.classList.toggle("sound-on-svg");
+        let volume = card.children[1];
+        
         card.classList.toggle("sound-on-div");
+        icon.classList.toggle("sound-on-svg");
+        volume.classList.toggle("volume-activated");
     }
 
     return {

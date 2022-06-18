@@ -7,20 +7,36 @@
 :root {
     font-size: 62.5%;
 
-    --color-a: #323238;
-    --color-b: #E1E1E6;
-    --color-c: #02799D;
+   /*  --color-a: hsl(240, 6%, 21%);
+    --color-b: hsl(240, 9%, 89%);
+    --color-c: hsl(194, 97%, 31%); */
+
+    --color-background: #ffffff;
+    --color-numbers: #333338;
+    --color-controls:#323239;
+
+    --color-cards-disabled: #e0e0e5;
+    --color-cards-activated: #02789c;
+
+    --color-sounds-disabled: #323239;
+    --color-sounds-activated: #ffffff;
+
+    --color-volume-disabled: #323239;
+    --color-volume-activated: #ffffff;
+
 
     --font-a: 'Roboto', sans-serif;
 }
 
 body {
+    background-color: var(--color-background);
     font-family: var(--font-a);
     min-height: 100vh;
     overflow-x: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color .8s;
 }
 
 .theme-buttons,
@@ -44,7 +60,7 @@ button.controls:hover,
     transform: scale(1.3);
 }
 
-#choose-theme{
+#choose-mode{
     position: absolute;
     top: 0;
     right: 0;
@@ -70,19 +86,22 @@ main {
 }
 
 #timer-numbers p {
-    font-family: var(--font-a);
     font-style: normal;
     font-weight: 500;
     font-size: 12.6rem;
     line-height: 14.8rem;
     text-align: center;
     text-transform: uppercase;
-    color: #323238;
+    color: var(--color-numbers);
 }
 
 #timer-controls {
     display: flex;
     justify-content: space-between;
+}
+
+#timer-controls svg path {
+    fill: var(--color-controls)
 }
 
 #sounds {
@@ -99,7 +118,7 @@ main {
     width: 13.8rem;
     height: 15.2rem;
     cursor: pointer;
-    background-color: var(--color-b);
+    background-color: var(--color-cards-disabled);
     border-radius: 2.4rem;
     display: flex;
     flex-direction: column;
@@ -108,39 +127,64 @@ main {
     transition: all .8s;
 }
 
-input[type=range] {
+.card-icon {
+    fill: var(--color-sounds-disabled)
+}
+
+
+.card-icon-activated {
+    fill: var(--color-sounds-activated)
+}
+
+.volume-controls {
     -webkit-appearance: none;
-    background: var(--color-a);
+    background: var(--color-volume-disabled);
     width: 9rem;
     height: .4rem;
     border-radius: .5rem;   
 }
 
-input[type=range]::-webkit-slider-thumb {
+.volume-controls::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 1.6rem;
     height: 1.6rem;
     border-radius: 50%; 
-    background: var(--color-a);
+    background: var(--color-volume-disabled);
     cursor: pointer;
 }
 
-input[type=range]::-moz-range-thumb {
+.volume-controls::-moz-range-thumb {
     border: 0;
     width: 1.6rem;
     height: 1.6rem;
     border-radius: 50%; 
-    background: var(--color-a);
+    background: var(--color-sounds-disabled);
     cursor: pointer;
 }
 
+.volume-activated {
+    background: var(--color-volume-activated);
+}
+
+.volume-activated::-webkit-slider-thumb {
+    background: var(--color-volume-activated);
+}
+
+.volume-activated::-moz-range-thumb {
+    background: var(--color-sounds-activated);
+}
+
 .sound-on-div{
-    background-color: var(--color-c);
+    background-color: var(--color-cards-activated);
+}
+
+.sound-svg{
+    fill: var(--color-sounds-disabled);
 }
 
 .sound-on-svg{
-    fill: #FFFFFF;
+    fill: var(--color-sounds-activated);
 }
 
 @media (max-width: 880px) {
@@ -158,11 +202,11 @@ input[type=range]::-moz-range-thumb {
         flex-direction: column-reverse;
     }
 
-    #choose-theme{
+    #choose-mode{
        position: static; 
     }
     
-    #choose-theme > button > img {
+    #choose-mode > button > img {
         width: 12vw;
         height: 12vw;
     }
