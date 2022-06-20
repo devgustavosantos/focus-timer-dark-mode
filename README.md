@@ -26,7 +26,7 @@ Esse projeto é um temporizador no estilo pomodoro com modo escuro e controle de
 
 ## Aviso
 
-- O projeto **está em andamento**, por isso é normal que erros aconteçam.
+- O projeto **está finalizado**, mas talvez tenha melhorias no futuro.
 
 - Esse projeto é uma versão mais avançada do [Focus Timer 2.0](https://github.com/devgustavosantos/focus-timer-2.0) por isso boa parte do projeto foi trazida para cá.
 
