@@ -20,7 +20,6 @@ const buttonLightMode = document.getElementById("light-mode");
 const buttonDarkMode = document.getElementById("dark-mode");
 
 
-
 export {
     buttonPlay,
     buttonStop,

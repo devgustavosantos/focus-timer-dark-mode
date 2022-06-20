@@ -1,7 +1,6 @@
 export function Display ({
     minutesDisplay,
     secondsDisplay,
-    sound
 }) {
     function updateTime(minutes, seconds) {
         minutesDisplay.textContent = String(minutes).padStart(2, "0");
@@ -34,12 +33,12 @@ export function Display ({
         }
     }
 
-    function activatedCard(eventTarget, card){
+    function cardStatus(eventTarget, card){
         let volumeWasTheTarget = eventTarget.classList.contains("volume-controls");
 
         if(!volumeWasTheTarget) {
             toggleCardAppearance(card);
-            resetVolumeAppearance(card);
+            resetVolumeValue(card);
         } 
     }
     
@@ -53,15 +52,15 @@ export function Display ({
 
     }
 
-    function resetVolumeAppearance(card) {
-        let volume = card.children[1]
-        volume.value = 50
+    function resetVolumeValue(card) {
+        let volume = card.children[1];
+        volume.value = 50;
     }
 
     return {
         updateTime,
         userIncreasedTime,
         userDecreasedTime,
-        activatedCard
+        cardStatus,
     }
 }

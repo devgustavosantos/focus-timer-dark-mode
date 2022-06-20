@@ -26,8 +26,7 @@ export function Sounds() {
         sound.loop = true;
         if(sound.paused){
             sound.play();
-            sound.volume = 0.5
-            console.log(sound.volume)
+            sound.volume = 0.5;
         } else {
             sound.pause();
         }
@@ -39,13 +38,11 @@ export function Sounds() {
     }
 
     function chooseVolume(volumeCard) {
-      let theSoundOfThisCard = chosenSound(volumeCard.parentNode.id)
-      let isTheSoundPlaying = !theSoundOfThisCard.paused
+      let theSoundOfThisCard = chosenSound(volumeCard.parentNode.id);
+      let isTheSoundPlaying = !theSoundOfThisCard.paused;
 
       if(isTheSoundPlaying) {
-        
-        theSoundOfThisCard.volume = `${(volumeCard.value)/100}`
-        console.log(theSoundOfThisCard.volume)
+        theSoundOfThisCard.volume = `${(volumeCard.value)/100}`;
       }
     }
   

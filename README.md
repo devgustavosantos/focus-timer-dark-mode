@@ -15,11 +15,11 @@ Esse projeto é um temporizador no estilo pomodoro com modo escuro e controle de
 ## Pré-Visualização
 
 <h1 align="center" style="max-width: 412px; margin: auto;">
-    <img src="./assets/image/preview/place-holder.jpg" alt="gif da versão mobile">
+    <img src="./assets/image/preview/mobile.gif" alt="gif da versão mobile">
 </h1>
 
 <h1 align="center">
-    <img src="./assets/image/preview/place-holder.jpg" alt="gif da versão desktop">
+    <img src="./assets/image/preview/desktop.gif" alt="gif da versão desktop">
 </h1>
 
 </br>
@@ -62,11 +62,14 @@ Além de melhorar exercitar o HTML, CSS e Git, o projeto tem a intenção de tra
 - [x]  Iniciar uma contagem regressiva;
 - [x]  Parar o temporizador;
 - [x]  Adicionar sons aos cards;
-- [ ]  Mudar o volume do som
+- [x]  Mudar o volume do som
+- [x]  O som deverá ser ativado/desativado se o usuário clicar no card;
+- [x]  O controle de volume funciona apenas se o card está ativado;
 - [x]  Aumentar o temporizador;
 - [x]  Diminuir o temporizador;  
 - [x]  Adicionar som quando o temporizador for encerrado.
-- [ ]  Escolher entre o tema claro e o escuro.
+- [x]  Escolher entre o tema claro e o escuro.
+
 
 
 </br>

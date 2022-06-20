@@ -39,22 +39,22 @@ export function Events({
      
     cardForest.addEventListener("click", function({target, currentTarget}) {
         sound.turnOnAmbient(target, currentTarget);
-        display.activatedCard(target, currentTarget);
+        display.cardStatus(target, currentTarget);
     });
      
     cardRain.addEventListener("click", function({target, currentTarget}) {
         sound.turnOnAmbient(target, currentTarget);
-        display.activatedCard(target, currentTarget);
+        display.cardStatus(target, currentTarget);
     });
      
     cardCoffeeShop.addEventListener("click", function({target, currentTarget}) {
         sound.turnOnAmbient(target, currentTarget);
-        display.activatedCard(target, currentTarget);
+        display.cardStatus(target, currentTarget);
     });
      
     cardFirePit.addEventListener("click", function({target, currentTarget}) {
         sound.turnOnAmbient(target, currentTarget);
-        display.activatedCard(target, currentTarget);
+        display.cardStatus(target, currentTarget);
     });
 
     volumeForest.addEventListener("input", function({currentTarget}) {
