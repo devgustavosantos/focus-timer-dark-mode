@@ -11,6 +11,11 @@ const cardRain = document.getElementById("rain-card");
 const cardCoffeeShop = document.getElementById("coffee-shop-card");
 const cardFirePit = document.getElementById("fire-pit-card");
 
+const volumeForest = document.getElementById("forest-volume");
+const volumeRain = document.getElementById("rain-volume");
+const volumeCoffeeShop = document.getElementById("coffee-shop-volume");
+const volumeFirePit = document.getElementById("fire-pit-volume");
+
 const buttonLightMode = document.getElementById("light-mode");
 const buttonDarkMode = document.getElementById("dark-mode");
 
@@ -27,6 +32,10 @@ export {
     cardRain,
     cardCoffeeShop,
     cardFirePit,
+    volumeForest,
+    volumeRain,
+    volumeCoffeeShop,
+    volumeFirePit,
     buttonLightMode,
     buttonDarkMode,
 }

@@ -7,6 +7,10 @@ import {
     cardRain,
     cardCoffeeShop,
     cardFirePit,
+    volumeForest,
+    volumeRain,
+    volumeCoffeeShop,
+    volumeFirePit,
     buttonLightMode,
     buttonDarkMode,
 } from "./elements.js";
@@ -33,24 +37,40 @@ export function Events({
         display.userDecreasedTime();
     });
      
-    cardForest.addEventListener("click", function({currentTarget}) {
-        sound.turnOnAmbient(currentTarget);
-        display.activatedCard(currentTarget);
+    cardForest.addEventListener("click", function({target, currentTarget}) {
+        sound.turnOnAmbient(target, currentTarget);
+        display.activatedCard(target, currentTarget);
     });
      
-    cardRain.addEventListener("click", function({currentTarget}) {
-        sound.turnOnAmbient(currentTarget);
-        display.activatedCard(currentTarget);
+    cardRain.addEventListener("click", function({target, currentTarget}) {
+        sound.turnOnAmbient(target, currentTarget);
+        display.activatedCard(target, currentTarget);
     });
      
-    cardCoffeeShop.addEventListener("click", function({currentTarget}) {
-        sound.turnOnAmbient(currentTarget);
-        display.activatedCard(currentTarget);
+    cardCoffeeShop.addEventListener("click", function({target, currentTarget}) {
+        sound.turnOnAmbient(target, currentTarget);
+        display.activatedCard(target, currentTarget);
     });
      
-    cardFirePit.addEventListener("click", function({currentTarget}) {
-        sound.turnOnAmbient(currentTarget);
-        display.activatedCard(currentTarget);
+    cardFirePit.addEventListener("click", function({target, currentTarget}) {
+        sound.turnOnAmbient(target, currentTarget);
+        display.activatedCard(target, currentTarget);
+    });
+
+    volumeForest.addEventListener("input", function({currentTarget}) {
+        sound.chooseVolume(currentTarget);
+    });
+     
+    volumeRain.addEventListener("input", function({currentTarget}) {
+        sound.chooseVolume(currentTarget);
+    });
+     
+    volumeCoffeeShop.addEventListener("input", function({currentTarget}) {
+        sound.chooseVolume(currentTarget);
+    });
+     
+    volumeFirePit.addEventListener("input", function({currentTarget}) {
+        sound.chooseVolume(currentTarget);
     });
 
     buttonLightMode.addEventListener("click", function({currentTarget}) {

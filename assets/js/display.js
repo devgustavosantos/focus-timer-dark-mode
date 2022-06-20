@@ -1,6 +1,7 @@
 export function Display ({
     minutesDisplay,
-    secondsDisplay
+    secondsDisplay,
+    sound
 }) {
     function updateTime(minutes, seconds) {
         minutesDisplay.textContent = String(minutes).padStart(2, "0");
@@ -33,13 +34,28 @@ export function Display ({
         }
     }
 
-    function activatedCard(card){
+    function activatedCard(eventTarget, card){
+        let volumeWasTheTarget = eventTarget.classList.contains("volume-controls");
+
+        if(!volumeWasTheTarget) {
+            toggleCardAppearance(card);
+            resetVolumeAppearance(card);
+        } 
+    }
+    
+    function toggleCardAppearance(card) {
         let icon = card.children[0].children[0];
         let volume = card.children[1];
         
         card.classList.toggle("sound-on-div");
         icon.classList.toggle("sound-on-svg");
         volume.classList.toggle("volume-activated");
+
+    }
+
+    function resetVolumeAppearance(card) {
+        let volume = card.children[1]
+        volume.value = 50
     }
 
     return {

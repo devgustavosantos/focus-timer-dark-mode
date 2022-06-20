@@ -13,7 +13,8 @@ const sound = Sounds();
 
 const display = Display({
     minutesDisplay,
-    secondsDisplay
+    secondsDisplay,
+    sound
 })
 
 const timer = Timer({

@@ -18,22 +18,40 @@ export function Sounds() {
       }
     }
     
-    function turnOnAmbient(sound) {
-        sound = chosenSound(sound.id);
+    function turnOnAmbient(eventTarget, card) {
+      let volumeWasTheTarget = eventTarget.classList.contains("volume-controls");
+      
+      if(!volumeWasTheTarget) {
+        let sound = chosenSound(card.id);
         sound.loop = true;
         if(sound.paused){
             sound.play();
+            sound.volume = 0.5
+            console.log(sound.volume)
         } else {
             sound.pause();
         }
+      }
     }
     
     function turnOnAlert() {
         alert.play();
     }
+
+    function chooseVolume(volumeCard) {
+      let theSoundOfThisCard = chosenSound(volumeCard.parentNode.id)
+      let isTheSoundPlaying = !theSoundOfThisCard.paused
+
+      if(isTheSoundPlaying) {
+        
+        theSoundOfThisCard.volume = `${(volumeCard.value)/100}`
+        console.log(theSoundOfThisCard.volume)
+      }
+    }
   
     return {
         turnOnAmbient,
-        turnOnAlert
+        turnOnAlert,
+        chooseVolume,
     }
   }
