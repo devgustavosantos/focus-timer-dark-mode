@@ -1,4 +1,4 @@
-# Focus Timer
+# Focus Timer Dark Mode
 
 Esse projeto é um temporizador no estilo pomodoro com modo escuro e controle de volume dos sons.
 
